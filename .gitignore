@@ -1,0 +1,14 @@
+# Python ignores
+__pycache__
+*.pyc
+*.pyo
+*.egg
+*.egg-info
+*.mo
+*.mo
+local_settings.py
+db.sqlite3-journal
+db.sqlite3-wal
+db.sqlite3-shm
+
+*.db
