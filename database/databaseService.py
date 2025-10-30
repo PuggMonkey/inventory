@@ -19,13 +19,16 @@ class DatabaseService:
         self._create_collections_if_not_exist()
 
     def connect(self) -> None:
+        """Connect to the database"""
         self.connection = sqlite3.connect(self.database_file)
         self.cursor = self.connection.cursor()
 
     def disconnect(self) -> None:
+        """Disconnect from the database"""
         self.connection.close()
 
     def _create_collections_if_not_exist(self) -> None:
+        """Create the Items and Accounts tables if they don't exist."""
         self.cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
         tables = self.cursor.fetchall()
         tables = [table[0] for table in tables]
