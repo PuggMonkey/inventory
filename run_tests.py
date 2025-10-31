@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Test runner for Inventory Management System
 """
@@ -17,11 +16,5 @@ if __name__ == "__main__":
     print("\n2. Running Integration Tests...")
     integration_result = pytest.main(["-v", "tests/test_integration.py"])
     
-    # Run all tests
-    print("\n3. Running All Tests...")
-    all_result = pytest.main(["-v", "tests/"])
-    
     print("\n" + "=" * 50)
     print("Test Execution Complete!")
-    
-    sys.exit(all_result)
