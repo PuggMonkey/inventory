@@ -9,7 +9,7 @@ The quantity of an item must be non-negative.
 
 The item also keeps track of the number of defective items of that type.
 """
-    def __init__(self,id: int, name: str, category: Category, quantity: int, defective_quantity: int = 0):
+    def __init__(self,id: int, name: str, category: int, quantity: int, defective_quantity: int = 0):
         from database.databaseService import db
         if quantity < 0 or defective_quantity < 0:
             raise ValueError("Quantity and defective quantity must be non-negative")
